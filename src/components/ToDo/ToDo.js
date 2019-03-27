@@ -14,7 +14,7 @@ function ToDo() {
         <li className="done">Suspense + Lazy</li>
         <li className="done">fetch JSON</li>
         <li className="done">Hooks + Context-API</li>
-        <li>Persistent storage, e.g. localStorage</li>
+        <li className="done">Persistent storage, e.g. localStorage</li>
         <li>Filter duplicate entries</li>
         <li>Show price</li>
         <li>Show +/- for entries, filter duplicate entries</li>

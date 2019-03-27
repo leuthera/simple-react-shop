@@ -6,4 +6,8 @@ function getLocalStorage(keyword) {
   return localStorage.getItem(keyword);
 }
 
-export { setLocalStorage, getLocalStorage };
+function removeLocalStorage(keyword) {
+  return localStorage.removeItem(keyword);
+}
+
+export { setLocalStorage, getLocalStorage, removeLocalStorage };
