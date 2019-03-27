@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import BookItem from "./BookItem/BookItem";
+import _ from "lodash";
 import { useFetch } from "react-hooks-fetch";
 import "./booklist.css";
 
@@ -13,7 +14,7 @@ function BookList() {
     <Fragment>
       <h2>BookList</h2>
       <ul>
-        {data.map(book => (
+        {_.uniqBy(data, "isbn").map(book => (
           <li key={book.isbn + Math.random()} className="book_entry">
             <BookItem book={book} />
           </li>
