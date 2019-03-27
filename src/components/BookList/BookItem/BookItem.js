@@ -3,8 +3,6 @@ import Detail from "./Detail/Detail";
 
 function BookItem({ book, index }) {
   const [showDetail, toggle] = useState(false);
-  console.log(book.isbn);
-  console.log(index);
   return (
     <Fragment>
       <h2

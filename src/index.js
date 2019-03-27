@@ -7,7 +7,7 @@ import Loader from "./components/Loader/Loader";
 import ContextProvider from "./components/Context/ContextProvider";
 
 import "./ext/normalize.css";
-import "./app.css";
+import "./index.css";
 
 const BookList = lazy(() => import("./components/BookList/BookList"));
 const ShoppingCart = lazy(() =>
