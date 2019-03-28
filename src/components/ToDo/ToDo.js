@@ -16,7 +16,7 @@ function ToDo() {
         <li className="done">Hooks + Context-API</li>
         <li className="done">Persistent storage, e.g. localStorage</li>
         <li className="done">Filter duplicate entries</li>
-        <li>Show price</li>
+        <li className="done">Show price</li>
         <li>Show +/- for entries, filter duplicate entries</li>
         <li>Checkout, just calculate price and send isbn + sum</li>
         <li>Tests</li>

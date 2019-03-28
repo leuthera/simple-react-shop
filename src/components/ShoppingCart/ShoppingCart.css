@@ -1,0 +1,8 @@
+.cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cart-list .item-counter {
+  margin-right: 10px;
+}

@@ -6,12 +6,14 @@ function BookItem({ book, index }) {
   return (
     <Fragment>
       <h2
+        className="book-title"
         onClick={() => {
           toggle(!showDetail);
         }}
       >
         {book.title}
       </h2>
+      <span className="book-price">{book.price} €</span>
       {showDetail && <Detail book={book} index={index} />}
     </Fragment>
   );
