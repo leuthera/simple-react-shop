@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import "./ItemCounter.css";
 
-const ItemCounter = () => {
+const ItemCounter = ({ count }) => {
   return (
     <Fragment>
       <button>+</button>
-      <input value="5" />
+      <input defaultValue={count} />
       <button>-</button>
     </Fragment>
   );

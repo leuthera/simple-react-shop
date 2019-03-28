@@ -20,11 +20,11 @@ function ShoppingCart() {
       </button>
       <ul className="cart-list">
         {cart.map((element, index) => (
-          <li>
+          <li key={Math.random()}>
             <span className="item-counter">
-              <ItemCounter />
+              <ItemCounter count={element.count} />
             </span>
-            <BookItem key={Math.random()} book={element.book} index={index} />
+            <BookItem book={element.book} index={index} />
           </li>
         ))}
       </ul>

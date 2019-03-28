@@ -11,19 +11,29 @@ const ContextApp = props => {
   const [cart, change] = useState(storedCart);
 
   const changeInterceptor = changeFn => {
-    return cart_obj => {
-      const new_cart = cart_obj.map(cart_element => {
-        if (cart_element.book) {
-          return cart_element;
+    return cart => {
+      const structured_cart = cart.map(item => {
+        if (item.book) {
+          return item;
         } else {
           return {
-            book: cart_element,
-            count: 0
+            book: item,
+            count: 1
           };
         }
       });
 
-      changeFn(new_cart);
+      const grouped_cart = Object.values(
+        _.groupBy(structured_cart, "book.isbn")
+      ).map(group => {
+        const count = group.length > 1 ? group[0].count + 1 : group[0].count;
+        return {
+          ...group[0],
+          count
+        };
+      });
+
+      changeFn(grouped_cart);
     };
   };
 
