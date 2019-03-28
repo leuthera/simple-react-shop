@@ -22,20 +22,20 @@ const ItemCounter = ({ book, count }) => {
   return (
     <Fragment>
       <button
-        onClick={() => {
-          addItem();
-        }}
-      >
-        +
-      </button>
-      <input defaultValue={count} />
-      <button
         disabled={count === 1}
         onClick={() => {
           removeItem();
         }}
       >
         -
+      </button>
+      <input defaultValue={count} />
+      <button
+        onClick={() => {
+          addItem();
+        }}
+      >
+        +
       </button>
     </Fragment>
   );

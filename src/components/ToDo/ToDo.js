@@ -18,7 +18,13 @@ function ToDo() {
         <li className="done">Filter duplicate entries</li>
         <li className="done">Show price</li>
         <li className="done">Show +/- for entries, filter duplicate entries</li>
-        <li>Checkout, just calculate price and send isbn + sum</li>
+        <li className="done">
+          Add "," instead of "." for prices and fillup 2 decimal places
+        </li>
+        <li className="done">
+          Checkout, just calculate price and send isbn + sum
+        </li>
+        <li>Show succesful purchase as modal overlay or growl message</li>
         <li>Tests</li>
       </ul>
     </Fragment>
