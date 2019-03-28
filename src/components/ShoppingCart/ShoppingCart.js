@@ -22,7 +22,7 @@ function ShoppingCart() {
         {cart.map((element, index) => (
           <li key={Math.random()}>
             <span className="item-counter">
-              <ItemCounter count={element.count} />
+              <ItemCounter book={element.book} count={element.count} />
             </span>
             <BookItem book={element.book} index={index} />
           </li>
