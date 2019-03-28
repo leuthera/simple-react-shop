@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import Context from "../Context/Context";
 import BookItem from "../BookList/BookItem/BookItem";
+import ItemCounter from "./ItemCounter/ItemCounter";
 import { removeLocalStorage } from "../../services/Storage/Storage";
+import "./ShoppingCart.css";
 
 function ShoppingCart() {
   const { cart, change } = useContext(Context);
@@ -16,9 +18,16 @@ function ShoppingCart() {
       >
         reset
       </button>
-      {cart.map((book, index) => (
-        <BookItem key={Math.random()} book={book} index={index} />
-      ))}
+      <ul className="cart-list">
+        {cart.map((element, index) => (
+          <li>
+            <span className="item-counter">
+              <ItemCounter />
+            </span>
+            <BookItem key={Math.random()} book={element.book} index={index} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
