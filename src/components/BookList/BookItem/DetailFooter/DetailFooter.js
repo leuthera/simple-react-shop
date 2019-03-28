@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from "react";
-import Context from "../../../Context/Context";
+import Context from "../../../ContextProvider/Context";
 import { withRouter } from "react-router-dom";
 
 const removeFromCart = (cart, index) => {

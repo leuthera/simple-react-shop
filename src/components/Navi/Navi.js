@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import { NavLink } from "react-router-dom";
-import Context from "../Context/Context";
+import Context from "../ContextProvider/Context";
 
 import "./navi.css";
 

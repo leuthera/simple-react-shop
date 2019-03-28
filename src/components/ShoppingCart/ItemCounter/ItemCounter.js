@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from "react";
-import Context from "../../Context/Context";
+import Context from "../../ContextProvider/Context";
 import "./ItemCounter.css";
 
 const ItemCounter = ({ book, count }) => {

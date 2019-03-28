@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Context from "../Context/Context";
+import Context from "../ContextProvider/Context";
 import BookItem from "../BookList/BookItem/BookItem";
 import ItemCounter from "./ItemCounter/ItemCounter";
 import { removeLocalStorage } from "../../services/Storage/Storage";
@@ -16,7 +16,7 @@ function ShoppingCart() {
           change([]);
         }}
       >
-        reset
+        Clear all
       </button>
       <ul className="cart-list">
         {cart.map((element, index) => (

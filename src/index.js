@@ -4,7 +4,7 @@ import { Route, BrowserRouter, Switch } from "react-router-dom";
 import ToDo from "./components/ToDo/ToDo";
 import Navi from "./components/Navi/Navi";
 import Loader from "./components/Loader/Loader";
-import ContextProvider from "./components/Context/ContextProvider";
+import ContextProvider from "./components/ContextProvider/ContextProvider";
 
 import "./ext/normalize.css";
 import "./index.css";
