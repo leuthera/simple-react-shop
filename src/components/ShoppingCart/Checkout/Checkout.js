@@ -1,8 +1,8 @@
-import React, { Fragment, useContext, useState, useEffect } from "react";
-import Context from "../ContextProvider/Context";
-import Formatter from "../../services/Formatter/Formatter";
+import React, { Fragment, useContext, useState } from "react";
+import Context from "../../ContextProvider/Context";
+import Formatter from "../../../services/Formatter/Formatter";
 import { Redirect } from "react-router-dom";
-import Modal from "../Modal/Modal";
+import Modal from "./Modal/Modal";
 
 function Checkout() {
   const { cart, change } = useContext(Context);

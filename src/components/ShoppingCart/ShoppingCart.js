@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Context from "../ContextProvider/Context";
 import BookItem from "../BookList/BookItem/BookItem";
 import ItemCounter from "./ItemCounter/ItemCounter";
-import Checkout from "../Checkout/Checkout";
+import Checkout from "./Checkout/Checkout";
 import { removeLocalStorage } from "../../services/Storage/Storage";
 import "./ShoppingCart.css";
 
