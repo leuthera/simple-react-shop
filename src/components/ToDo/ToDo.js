@@ -24,7 +24,10 @@ function ToDo() {
         <li className="done">
           Checkout, just calculate price and send isbn + sum
         </li>
-        <li>Show succesful purchase as modal overlay or growl message</li>
+        <li className="done">
+          Show succesful purchase as modal overlay or growl message
+        </li>
+        <li>After purchase switch to "Home" and clear cart</li>
         <li>Tests</li>
       </ul>
     </Fragment>
