@@ -1,11 +1,13 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, { Fragment, useContext, useState, useEffect } from "react";
 import Context from "../ContextProvider/Context";
 import Formatter from "../../services/Formatter/Formatter";
+import { Redirect } from "react-router-dom";
 import Modal from "../Modal/Modal";
 
 function Checkout() {
-  const { cart } = useContext(Context);
+  const { cart, change } = useContext(Context);
   const [showModal, setModal] = useState(false);
+  const [endOfProcess, setEndofProcess] = useState(false);
 
   const order = {
     sum: cart.reduce((acc, curr) => acc + curr.count * curr.book.price, 0),
@@ -18,9 +20,7 @@ function Checkout() {
     currency: Formatter.resolvedOptions().currency
   };
 
-  const checkout = () => {
-    setModal(true);
-  };
+  const checkout = () => setModal(true);
 
   return (
     <Fragment>
@@ -29,6 +29,7 @@ function Checkout() {
       <button
         onClick={() => {
           checkout();
+          console.log(order);
         }}
       >
         Checkout
@@ -37,11 +38,15 @@ function Checkout() {
         <Modal
           msg="Thank you!"
           order={order}
+          onLoad={() => change([])}
           close={() => {
             setModal(false);
+            change([]);
+            setEndofProcess(true);
           }}
         />
       )}
+      {endOfProcess && <Redirect to="/" />}
     </Fragment>
   );
 }
