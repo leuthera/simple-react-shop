@@ -28,7 +28,12 @@ function ToDo() {
           Show succesful purchase as modal overlay or growl message
         </li>
         <li className="done">After purchase switch to "Home" and clear cart</li>
-        <li>Tests</li>
+        <li>
+          Tests
+          <ul>
+            <li>shoppingCart.t.js - mocking components</li>
+          </ul>
+        </li>
       </ul>
     </Fragment>
   );
