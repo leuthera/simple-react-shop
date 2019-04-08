@@ -7,10 +7,11 @@ function User() {
       {store.getState().map(person =>
         Object.keys(person).map(key => (
           <p>
-            {key} {person[key]}
+            {key} <input value={person[key]} />
           </p>
         ))
       )}
+      <button>update</button>
     </div>
   );
 }
