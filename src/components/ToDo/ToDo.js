@@ -50,6 +50,14 @@ function ToDo() {
             <li className="done">
               After purchase switch to "Home" and clear cart
             </li>
+            <li className="done">Handle unknown router path</li>
+            <li>
+              Redux + User
+              <ul>
+                <li>Update userdata</li>
+                <li>Show user in cart</li>
+              </ul>
+            </li>
             <li>
               Tests
               <ul>
