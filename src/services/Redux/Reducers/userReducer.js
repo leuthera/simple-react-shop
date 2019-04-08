@@ -7,10 +7,12 @@ const initialUserState = [
 ];
 
 function userReducer(state = initialUserState, action) {
-  if (action.type === "ADD_USER") {
-    return [...state, action.payload];
+  switch (action.type) {
+    case "ADD_USER":
+      return [...state, action.payload];
+    default:
+      return state;
   }
-  return state;
 }
 
 export default userReducer;

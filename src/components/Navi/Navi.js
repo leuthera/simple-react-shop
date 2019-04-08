@@ -20,6 +20,11 @@ function ToDo() {
             Cart ({cart.length})
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/user" activeClassName="active">
+            User
+          </NavLink>
+        </li>
       </ul>
     </Fragment>
   );
