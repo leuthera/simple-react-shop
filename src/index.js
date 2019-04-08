@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Route, BrowserRouter, Switch, Redirect } from "react-router-dom";
 import ToDo from "./components/ToDo/ToDo";
 import Navi from "./components/Navi/Navi";
+import NotFound from "./components/NotFound/NotFound";
 import Loader from "./components/Loader/Loader";
 import User from "./components/User/User";
 import ContextProvider from "./components/ContextProvider/ContextProvider";
@@ -28,6 +29,7 @@ function App() {
                 <Route exact path="/" component={() => <BookList />} />
                 <Route path="/cart" component={() => <ShoppingCart />} />
                 <Route path="/user" component={() => <User />} />
+                <Route component={() => <NotFound />} />
               </Switch>
             </Suspense>
           </Fragment>
