@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import ToDo from "./components/ToDo/ToDo";
 import Navi from "./components/Navi/Navi";
+import NotFound from "./components/NotFound/NotFound";
 import Loader from "./components/Loader/Loader";
 import ContextProvider from "./components/ContextProvider/ContextProvider";
 
@@ -26,6 +27,7 @@ function App() {
               <Switch>
                 <Route exact path="/" component={() => <BookList />} />
                 <Route path="/cart" component={() => <ShoppingCart />} />
+                <Route component={() => <NotFound />} />
               </Switch>
             </Suspense>
           </Fragment>
